@@ -14,6 +14,7 @@ class Player extends React.Component {
     return (
       <div>
         <p>{this.props.player.name}</p>
+        <p>{this.props.player.position}</p>
         <button onClick={this.removePlayer} >Remove player</button>
         </div>
     )
