@@ -1,18 +1,17 @@
 import React from 'react';
-import Player from './Player'
+import Player from './Player';
+
+import { connect } from 'react-redux';
 
 class PlayersList extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.removePlayer = this.removePlayer.bind(this);
   }
 
   removePlayer(id) {
     this.props.removePlayer(id);
-    // this.setState((state) => ({
-    //   players: this.state.players.filter(player => player.id !== id)
-    // }))
   }
 
   render() {
