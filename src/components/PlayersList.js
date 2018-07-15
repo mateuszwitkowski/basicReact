@@ -1,11 +1,12 @@
 import React from 'react';
 import Player from './Player'
 
-class PlayersList extends React.Component{
-
-  render() {
-    const players =  [
-      {
+class PlayersList extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      players: [
+        {
           "id": 3176,
           "name": "Matthias Ginter",
           "position": "Defender",
@@ -13,8 +14,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Germany",
           "nationality": "Germany",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 3185,
           "name": "Lars Stindl",
           "position": "Midfielder",
@@ -22,8 +23,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Germany",
           "nationality": "Germany",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 3470,
           "name": "Yann Sommer",
           "position": "Goalkeeper",
@@ -31,8 +32,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Switzerland",
           "nationality": "Switzerland",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 3475,
           "name": "Nico Elvedi",
           "position": "Defender",
@@ -40,8 +41,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Switzerland",
           "nationality": "Switzerland",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 3480,
           "name": "Josip Drmić",
           "position": "Attacker",
@@ -49,8 +50,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Switzerland",
           "nationality": "Switzerland",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 3655,
           "name": "Thorgan Hazard",
           "position": "Midfielder",
@@ -58,8 +59,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Belgium",
           "nationality": "Belgium",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 6666,
           "name": "Christofer Heimeroth",
           "position": "Goalkeeper",
@@ -67,8 +68,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Germany",
           "nationality": "Germany",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 6667,
           "name": "Tobias Sippel",
           "position": "Goalkeeper",
@@ -76,8 +77,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Germany",
           "nationality": "Germany",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 6668,
           "name": "Moritz Nicolas",
           "position": "Goalkeeper",
@@ -85,8 +86,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Germany",
           "nationality": "Germany",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 6669,
           "name": "Oscar Wendt",
           "position": "Defender",
@@ -94,8 +95,8 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Sweden",
           "nationality": "Sweden",
           "role": "PLAYER"
-      },
-      {
+        },
+        {
           "id": 6670,
           "name": "Tony Jantschke",
           "position": "Defender",
@@ -103,15 +104,26 @@ class PlayersList extends React.Component{
           "countryOfBirth": "Germany",
           "nationality": "Germany",
           "role": "PLAYER"
-      }
-  ];
-      return (
-          <div>
-              {
-                players.map(player => (<Player key={player.id.toString()} player={player}/>))
-              }
-          </div>
-      )
+        }
+      ]
+    }
+
+    this.removePlayer = this.removePlayer.bind(this);
+  }
+
+  removePlayer(id) {
+    this.setState((state) => ({
+      players: this.state.players.filter(player => player.id !== id)
+    }))
+  }
+  render() {
+    return (
+      <div>
+        {
+          this.state.players.map(player => (<Player key={player.id.toString()} player={player} removePlayer={this.removePlayer} />))
+        }
+      </div>
+    )
   }
 
 }
