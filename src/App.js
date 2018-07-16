@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 
 import PlayersList from './components/PlayersList';
 import PlayerForm from './components/PlayerForm';
