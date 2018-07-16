@@ -5,6 +5,7 @@ import * as playersActions from '../store/players.actions';
 class PlayerForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = this.props && this.props.player
       ? this.props.player
       : {
