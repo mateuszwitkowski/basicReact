@@ -1,5 +1,6 @@
 export const LOAD_PLAYERS = '[Players] Load';
 export const ADD_PLAYER = '[Players] Add';
+export const SET_EDITED_PLAYER = '[Players] Set edited player'
 export const UPDATE_PLAYER = '[Players] Update';
 export const REMOVE_PLAYER = '[Players] Remove';
 
@@ -17,4 +18,8 @@ export function updatePlayer(player) {
 
 export function removePlayer(playerId) {
   return { type: REMOVE_PLAYER, playerId }
+}
+
+export function setEditedPlayer(playerId) {
+  return { type: SET_EDITED_PLAYER, playerId }
 }

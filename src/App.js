@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import PlayersList from './components/PlayersList';
-import AddPlayerForm from './components/AddPlayerForm';
+import PlayerForm from './components/PlayerForm';
 import * as playersActions from './store/players.actions';
 import { connect } from 'react-redux';
 
@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div>
         <PlayersList players={this.props.players} removePlayer={this.removePlayer}/>
-        <AddPlayerForm addPlayer={this.addPlayer}/>
+        <PlayerForm/>
       </div>
     );
   }

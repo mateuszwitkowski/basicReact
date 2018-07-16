@@ -3,7 +3,8 @@ import {
   LOAD_PLAYERS,
   ADD_PLAYER,
   UPDATE_PLAYER,
-  REMOVE_PLAYER
+  REMOVE_PLAYER,
+  SET_EDITED_PLAYER
 } from './players.actions'
 
 const initialState = {
@@ -107,7 +108,8 @@ const initialState = {
       "nationality": "Germany",
       "role": "PLAYER"
     }
-  ]
+  ],
+  editedPlayerId: null
 }
 
 function players(state = initialState, action) {
@@ -127,12 +129,18 @@ function players(state = initialState, action) {
         ...state,
         players: state.players.map(player => {
           return player.id === action.player.id ? { ...player, ...action.player } : player;
-        })
+        }),
+        editedPlayerId: null
       }
     case REMOVE_PLAYER:
       return {
         ...state,
         players: state.players.filter(player => player.id !== action.playerId)
+      }
+    case SET_EDITED_PLAYER:
+      return {
+        ...state,
+        editedPlayerId: action.playerId
       }
     default:
       return state
