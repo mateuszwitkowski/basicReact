@@ -22,9 +22,9 @@ class PlayerForm extends React.Component {
   savePlayer(event) {
     event.preventDefault();
     if (this.state.id) {
-      this.updatePlayer(this.state);     
+      this.updatePlayer(this.state);
     } else {
-      this.createPlayer(this.state);     
+      this.createPlayer(this.state);
     }
   }
 
@@ -43,15 +43,19 @@ class PlayerForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.savePlayer}>
-        <input name="name" value={this.state.name} onChange={this.handleChange} placeholder="Name(s) and surname(s)" />
-        <select name="position" value={this.state.position} onChange={this.handleChange} placeholder="Position">
-          <option value="Goalkeeper">Goalkeeper</option>
-          <option value="Defender">Defender</option>
-          <option value="Midfielder">Midfielder</option>
-          <option value="Attacker">Attacker</option>
-        </select>
-        <button type="submit">{this.state.id ? 'Save changes' : 'Add player'}</button>
+      <form className="player-form" onSubmit={this.savePlayer}>
+        <div className="player">
+          <input className="player-form__input" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Name(s) and surname(s)" />
+          <select className="player-form__select" name="position" value={this.state.position} onChange={this.handleChange} placeholder="Position">
+            <option value="Goalkeeper">Goalkeeper</option>
+            <option value="Defender">Defender</option>
+            <option value="Midfielder">Midfielder</option>
+            <option value="Attacker">Attacker</option>
+          </select>
+        </div>
+        <div className="player-actions">
+         <button type="submit" className="player__button button">{this.state.id ? 'Save changes' : 'Add player'}</button>
+        </div>
       </form>
     )
   }

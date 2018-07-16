@@ -1,5 +1,99 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+.button {
+    margin-right: 12px;
+    padding: 6px 0;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #567d46;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 3px solid #567d46;
+    cursor: pointer;
+}
+
+.container {
+  width: 60vw;
+  padding-top: 5vw; 
+  margin: 0 auto;
+}
+
+.players-list {
+  width: 100%;
+  margin-bottom: 48px;
+  font-size: 18px;
+}
+
+.player-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player,
+.player-actions {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.player {
+  justify-content: space-between;
+}
+
+.player-actions {
+  justify-content: flex-end;
+}
+
+.player__name {
+  width: 60%;
+}
+
+.player__position {
+  width: 40%;
+}
+
+.player__name__title,
+.player__position__title {
+  font-weight: 700;
+}
+
+.player__button {
+  width: 40%;
+}
+
+.player-form {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-form__input,
+.player-form__select {
+  height: 36px;
+  padding: 0 0 0 12px;
+  margin: 0;
+  border: 0;
+  outline: 1px solid green;
+}
+
+.player-form__input {
+  width: 50%;
+}
+
+.player-form__select {
+  width: 40%;
 }

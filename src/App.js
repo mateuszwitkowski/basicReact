@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <PlayersList players={this.props.players} removePlayer={this.removePlayer}/>
         <PlayerForm/>
       </div>

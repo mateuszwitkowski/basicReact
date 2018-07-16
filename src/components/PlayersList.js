@@ -1,8 +1,6 @@
 import React from 'react';
 import Player from './Player';
 
-import { connect } from 'react-redux';
-
 class PlayersList extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +14,7 @@ class PlayersList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="players-list">
         {
           this.props.players.map(player => (<Player key={player.id.toString()} player={player} removePlayer={this.removePlayer} />))
         }

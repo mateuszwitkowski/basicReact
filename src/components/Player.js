@@ -23,11 +23,15 @@ class Player extends React.Component {
     return (
       <div>
         {this.props.editedPlayerId !== this.props.player.id ? (
-          <div>
-            <p>{this.props.player.name}</p>
-            <p>{this.props.player.position}</p>
-            <button onClick={this.removePlayer} >Remove player</button>
-            <button onClick={this.editPlayer}>Edit player</button>
+          <div className="player-wrapper">
+          <div className="player">
+            <p className="player__name"><span className="player__name__title">Name: </span>{this.props.player.name}</p>
+            <p className="player__position"><span className="player__position__title">Position: </span>{this.props.player.position}</p>
+          </div>
+          <div className="player-actions">
+            <button className="player__button button" onClick={this.removePlayer} >Remove player</button>
+            <button className="player__button button" onClick={this.editPlayer}>Edit player</button>
+          </div>
           </div>
         ) : (
             <div>
