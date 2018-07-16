@@ -10,103 +10,59 @@ import {
 const initialState = {
   players: [
     {
-      "id": 3176,
-      "name": "Matthias Ginter",
-      "position": "Defender",
-      "dateOfBirth": "1994-01-03T00:00:00Z",
-      "countryOfBirth": "Germany",
-      "nationality": "Germany",
-      "role": "PLAYER"
-    },
-    {
-      "id": 3185,
-      "name": "Lars Stindl",
-      "position": "Midfielder",
-      "dateOfBirth": "1988-01-04T00:00:00Z",
-      "countryOfBirth": "Germany",
-      "nationality": "Germany",
-      "role": "PLAYER"
-    },
-    {
-      "id": 3470,
-      "name": "Yann Sommer",
+      "id": 1,
+      "name": "Wojciech Szczęsny",
       "position": "Goalkeeper",
-      "dateOfBirth": "1988-01-04T00:00:00Z",
-      "countryOfBirth": "Switzerland",
-      "nationality": "Switzerland",
-      "role": "PLAYER"
     },
     {
-      "id": 3475,
-      "name": "Nico Elvedi",
+      "id": 2,
+      "name": "Michał Pazdan",
       "position": "Defender",
-      "dateOfBirth": "1996-01-01T00:00:00Z",
-      "countryOfBirth": "Switzerland",
-      "nationality": "Switzerland",
-      "role": "PLAYER"
     },
     {
-      "id": 3480,
-      "name": "Josip Drmić",
+      "id": 4,
+      "name": "Thiago Cionek",
+      "position": "Defender",
+    },
+    {
+      "id": 13,
+      "name": "Maciej Rybus",
+      "position": "Defender",
+    },
+    {
+      "id": 20,
+      "name": "Łukasz Piszczek",
+      "position": "Defender",
+    },
+    {
+      "id": 6,
+      "name": "Jacek Góralski",
+      "position": "Midfielder",
+    },
+    {
+      "id": 10,
+      "name": "Grzegorz Krychowiak",
+      "position": "Midfielder",
+    },
+    {
+      "id": 11,
+      "name": "Kamil Grosicki",
+      "position": "Midfielder",
+    },
+    {
+      "id": 16,
+      "name": "Jakub Błaszczykowski",
+      "position": "Midfielder",
+    },
+    {
+      "id": 19,
+      "name": "Piotr Zieliński",
+      "position": "Midfielder",
+    },
+    {
+      "id": 9,
+      "name": "Robert Lewandowski",
       "position": "Attacker",
-      "dateOfBirth": "1991-12-30T00:00:00Z",
-      "countryOfBirth": "Switzerland",
-      "nationality": "Switzerland",
-      "role": "PLAYER"
-    },
-    {
-      "id": 3655,
-      "name": "Thorgan Hazard",
-      "position": "Midfielder",
-      "dateOfBirth": "1993-01-04T00:00:00Z",
-      "countryOfBirth": "Belgium",
-      "nationality": "Belgium",
-      "role": "PLAYER"
-    },
-    {
-      "id": 6666,
-      "name": "Christofer Heimeroth",
-      "position": "Goalkeeper",
-      "dateOfBirth": "1980-12-29T00:00:00Z",
-      "countryOfBirth": "Germany",
-      "nationality": "Germany",
-      "role": "PLAYER"
-    },
-    {
-      "id": 6667,
-      "name": "Tobias Sippel",
-      "position": "Goalkeeper",
-      "dateOfBirth": "1988-01-04T00:00:00Z",
-      "countryOfBirth": "Germany",
-      "nationality": "Germany",
-      "role": "PLAYER"
-    },
-    {
-      "id": 6668,
-      "name": "Moritz Nicolas",
-      "position": "Goalkeeper",
-      "dateOfBirth": "1996-12-30T00:00:00Z",
-      "countryOfBirth": "Germany",
-      "nationality": "Germany",
-      "role": "PLAYER"
-    },
-    {
-      "id": 6669,
-      "name": "Oscar Wendt",
-      "position": "Defender",
-      "dateOfBirth": "1984-12-31T00:00:00Z",
-      "countryOfBirth": "Sweden",
-      "nationality": "Sweden",
-      "role": "PLAYER"
-    },
-    {
-      "id": 6670,
-      "name": "Tony Jantschke",
-      "position": "Defender",
-      "dateOfBirth": "1990-01-01T00:00:00Z",
-      "countryOfBirth": "Germany",
-      "nationality": "Germany",
-      "role": "PLAYER"
     }
   ],
   editedPlayerId: null
